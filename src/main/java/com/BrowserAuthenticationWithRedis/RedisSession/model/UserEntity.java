@@ -8,20 +8,21 @@ import lombok.*;
 
 import java.io.Serializable;
 
-@Entity(name="user_details")
+@Entity(name="user_form_data")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User  implements Serializable {
+public class UserEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String userName;
+    private String username;
     private String email;
     private String password;
+    private String role;
 
 
 }
